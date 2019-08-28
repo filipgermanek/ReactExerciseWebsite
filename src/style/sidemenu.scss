@@ -1,0 +1,28 @@
+.sidemenu-wrapper {
+	display: flex;
+	height: 100%;
+	flex: 0 0 25%;
+	flex-direction: column;
+	padding-left: 15px;
+	.button-one, .button-two {
+		width: 100%;
+		padding: 21px 34px;
+		border: none;
+		text-transform: uppercase;
+		color: white;
+		text-align: left;
+		font-size: 15px;
+		cursor: pointer;
+		&:hover {
+			background-color: #e96340;
+		}
+	}
+	.button-one {
+		margin-top: 100px;
+		background-color: #1390a0;
+	}
+	.button-two {
+		margin-top: 8px;
+		background-color: #1c2023;
+	}
+}

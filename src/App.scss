@@ -1,0 +1,41 @@
+@import "style/posts.scss";
+@import "style/post.scss";
+@import "style/sidemenu.scss";
+html, body, #root {
+	height: 100%;
+}
+.App {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	overflow: hidden;
+	height: 100%;
+	background-color: #F0F0F0;
+	.app-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		flex: 0 0 40px;
+		padding-right: 60px;
+		background-color: #1A2021;
+		.header-button {
+			background-color: #1A2021;
+			border: none;
+			color: white;
+			font-weight: 700;
+			cursor: pointer;
+			text-transform: uppercase;
+			padding: 8px 15px; 
+			&:hover {
+				background-color: #e96340;;
+			}
+		}
+	}
+	.app-content {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: row;
+		padding: 0 66px;
+		overflow: auto;
+	}
+}
