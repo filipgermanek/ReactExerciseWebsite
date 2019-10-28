@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import {Editor, EditorState, ContentState} from 'draft-js';
 
 class Post extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			editorState: EditorState.createWithContent(ContentState.createFromText(this.props.post.body))
+			editorState: EditorState.createWithContent(ContentState.createFromText(this.props.post.body)),
+			editMode: false
 		}
 		this.onChange = (editorState) => this.setState({editorState});
 	    this.setEditor = (editor) => {
@@ -26,12 +26,14 @@ class Post extends React.Component {
 					{this.props.post.title}
 				</span>
 				<div className="post-body">
-					{this.props.post.body}
-					<Editor
-			          ref={this.setEditor}
-			          editorState={this.state.editorState}
-			          onChange={this.onChange}
-			        />
+					{this.state.editMode ? 
+						<Editor
+				          ref={this.setEditor}
+				          editorState={this.state.editorState}
+				          onChange={this.onChange}
+				        />
+				        : this.props.post.body
+					}
 				</div>
 			</div>
 		)

@@ -1,0 +1,38 @@
+.dropdown-button-wrapper {
+	position: relative;
+	.dropdown-button {
+		background-color: $color-black;
+		border: none;
+		color: white;
+		font-weight: 700;
+		cursor: pointer;
+		text-transform: uppercase;
+		padding: 8px 15px;
+		height: 40px; 
+		max-width: 100px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		outline: none;
+		&:hover, &.expanded {
+			background-color: $color-orange;
+		}
+	}
+	.dropdown-list {
+		position: absolute;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		.dropdown-list-option {
+			padding: 4px 16px;
+			min-width: 240px;
+			cursor: pointer;
+			color: $color-white;
+			background-color: $color-black;
+			//TODO box-shadow: 3px 1px 63px -33px rgba(18,2,18,1);
+			&:hover {
+				background-color: $color-orange;
+			}
+		}
+	}
+}
